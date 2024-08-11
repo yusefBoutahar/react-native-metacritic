@@ -1,5 +1,5 @@
 import React from "react";
-import { Games } from "./components/Games";
+import { Main } from "./components/Main";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
@@ -9,7 +9,7 @@ export default function App() {
     <SafeAreaProvider>
       <View style={styles.container}>
         <StatusBar style={"light"} />
-        <Games />
+        <Main />
       </View>
     </SafeAreaProvider>
   );

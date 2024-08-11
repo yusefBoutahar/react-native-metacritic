@@ -1,11 +1,12 @@
 import React from "react";
-import { View, Text, ActivityIndicator, FlatList } from "react-native";
+import { View, Text, ActivityIndicator, FlatList, Pressable } from "react-native";
 import { getLatestGames } from "../lib/metacritic";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { Logo } from "./Logo";
 import { AnimatedCard } from "./AnimatedCard";
+import { Link } from "expo-router";
+import { Logo, AwesoneInfo } from "./Icons";
 
-export const Games = () => {
+export const Main = () => {
   const [games, setGames] = React.useState([]);
   const [error, setError] = React.useState(null);
   const insets = useSafeAreaInsets();
@@ -25,7 +26,11 @@ export const Games = () => {
   return (
     <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
       <Logo />
-
+      <Link asChild href="/about">
+        <Pressable>
+          <AwesoneInfo  />
+        </Pressable>
+      </Link>
       {error ? (
         <Text>Error: {error}</Text>
       ) : games.length === 0 ? (

@@ -1,8 +1,17 @@
+import FontAwesome from "@expo/vector-icons/FontAwesome";
 import * as React from "react";
 import Svg, { Path } from "react-native-svg";
-/* SVGR has dropped some elements not supported by react-native-svg: title */
+
+export const AwesoneInfo = () => {
+  return <FontAwesome name="info" size={32} color="white" />;
+};
+
+export const AwesomeHome = () => {
+  return <FontAwesome name="home" size={32} color="white" />;
+}
+
 export const Logo = (props) => (
-<Svg xmlns="http://www.w3.org/2000/svg" width={176} height={40} {...props}>
+  <Svg xmlns="http://www.w3.org/2000/svg" width={176} height={40} {...props}>
     <Path d="M36.978 19.49a17.49 17.49 0 1 1 0-.021" />
     <Path
       fill="#F2F2F2"
@@ -18,4 +27,3 @@ export const Logo = (props) => (
     />
   </Svg>
 );
-export default Logo;
