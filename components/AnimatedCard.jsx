@@ -1,6 +1,6 @@
 import { Animated } from "react-native";
 import { useEffect, useRef } from "react";
-import { Game } from "./Game";
+import { GameCard } from "./GameCard";
 
 export const AnimatedCard = ({ game, index }) => {
   const opacity = useRef(new Animated.Value(0)).current;
@@ -16,7 +16,7 @@ export const AnimatedCard = ({ game, index }) => {
 
   return (
     <Animated.View style={{ opacity }}>
-      <Game game={game} />
+      <GameCard game={game} />
     </Animated.View>
   );
 };
