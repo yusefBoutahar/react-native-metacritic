@@ -13,15 +13,15 @@ export const GameCard = ({ game }) => {
           onClick={() => {
             console.log("clicked");
           }}
-          className="flex-row w-full bg-gray-800 rounded-md h-40 p-4"
+          className="flex-row w-full bg-gray-900 rounded-md h-40 p-4"
           key={game.slug}
         >
           <Image
             className="w-20 h-full rounded-md mr-4"
             source={{ uri: game.image }}
           />
-          <View>
-            <Text className="text-white font-bold text-md">{game.title}</Text>
+          <View className="flex justify-between flex-shrink">
+            <Text className="text-white font-bold text-xl">{game.title}</Text>
             <Score score={game.score} />
             <Text className="text-white">
               {game.description.slice(0, 100)} ...

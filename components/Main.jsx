@@ -1,15 +1,12 @@
 import React from "react";
-import { View, Text, ActivityIndicator, FlatList, Pressable } from "react-native";
+import { ActivityIndicator, FlatList, Text } from "react-native";
 import { getLatestGames } from "../lib/metacritic";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { AnimatedCard } from "./AnimatedCard";
-import { Link } from "expo-router";
-import { Logo, AwesoneInfo } from "./Icons";
+import { Screen } from "./Screen";
 
 export const Main = () => {
   const [games, setGames] = React.useState([]);
   const [error, setError] = React.useState(null);
-  const insets = useSafeAreaInsets();
 
   React.useEffect(() => {
     const fetchGames = async () => {
@@ -24,13 +21,7 @@ export const Main = () => {
   }, []);
 
   return (
-    <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
-      <Logo />
-      <Link asChild href="/about">
-        <Pressable>
-          <AwesoneInfo  />
-        </Pressable>
-      </Link>
+    <Screen>
       {error ? (
         <Text>Error: {error}</Text>
       ) : games.length === 0 ? (
@@ -44,6 +35,6 @@ export const Main = () => {
           )}
         ></FlatList>
       )}
-    </View>
+    </Screen>
   );
 };
