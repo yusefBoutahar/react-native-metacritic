@@ -30,11 +30,14 @@ export const Detail = () => {
         }}
       />
       {game ? (
-        <ScrollView className="">
-          <View>
-            <Image className="w-full h-96" source={{ uri: game.img }} />
-            <Text className="text-white font-bold text-2xl">{game.title}</Text>
+        <ScrollView>
+          <View className="flex justify-between mx-2 items-center">
+            <Image
+              className="w-60 h-72 rounded mb-4"
+              source={{ uri: game.img }}
+            />
             <Score score={game.score} />
+            <Text className="text-white font-bold text-2xl my-2">{game.title}</Text>
             <Text className="text-white">{game.description}</Text>
           </View>
         </ScrollView>
