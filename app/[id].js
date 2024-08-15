@@ -2,7 +2,8 @@ import { View, Text, Image, ActivityIndicator, ScrollView } from "react-native";
 import { Score } from "../components/Score";
 import { useEffect, useState } from "react";
 import { getGameDetails } from "../lib/metacritic";
-import { useLocalSearchParams } from "expo-router";
+import { useLocalSearchParams, Stack } from "expo-router";
+import { Screen } from "../components/Screen";
 
 export const Detail = () => {
   const { id } = useLocalSearchParams();
@@ -16,9 +17,20 @@ export const Detail = () => {
   }, [id]);
 
   return (
-    <View className="h-full">
+    <Screen>
+      <Stack.Screen
+        options={{
+          headerStyle: {
+            backgroundColor: "#ffee00",
+          },
+          headerTintColor: "black",
+          headerLeft: () => {},
+          headerRight: () => {},
+          headerTitle: game ? game.title : "Cargando...",
+        }}
+      />
       {game ? (
-        <ScrollView className="px-4 mt-16">
+        <ScrollView className="">
           <View>
             <Image className="w-full h-96" source={{ uri: game.img }} />
             <Text className="text-white font-bold text-2xl">{game.title}</Text>
@@ -31,7 +43,7 @@ export const Detail = () => {
       ) : (
         <ActivityIndicator color={"#fff"} size={"large"} />
       )}
-    </View>
+    </Screen>
   );
 };
 
