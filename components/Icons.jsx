@@ -2,13 +2,13 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import * as React from "react";
 import Svg, { Path } from "react-native-svg";
 
-export const AwesoneInfo = () => {
-  return <FontAwesome name="info" size={32} color="white" />;
+export const AwesoneInfo = (props) => {
+  return <FontAwesome name="info" size={32} color={props.color || "white"} />;
 };
 
-export const AwesomeHome = () => {
-  return <FontAwesome name="home" size={32} color="white" />;
-}
+export const AwesomeHome = (props) => {
+  return <FontAwesome name="home" size={32} color={props.color || "white"} />;
+};
 
 export const Logo = (props) => (
   <Svg xmlns="http://www.w3.org/2000/svg" width={176} height={40} {...props}>

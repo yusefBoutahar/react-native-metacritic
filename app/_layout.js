@@ -19,13 +19,7 @@ export default function Layout() {
               </Pressable>
             </Link>
           ),
-          headerRight: () => (
-            <Link asChild href="/about">
-              <Pressable>
-                <AwesoneInfo />
-              </Pressable>
-            </Link>
-          ),
+          headerRight: () => {},
         }}
       />
     </View>
