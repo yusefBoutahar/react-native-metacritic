@@ -1,23 +1,15 @@
-import React from "react";
+import {useEffect, useState} from "react";
 import { ActivityIndicator, FlatList, Text } from "react-native";
 import { getLatestGames } from "../lib/metacritic";
 import { AnimatedCard } from "./AnimatedCard";
 import { Screen } from "./Screen";
 
 export const Main = () => {
-  const [games, setGames] = React.useState([]);
-  const [error, setError] = React.useState(null);
+  const [games, setGames] = useState([]);
+  const [error, setError] = useState(null);
 
-  React.useEffect(() => {
-    const fetchGames = async () => {
-      try {
-        const games = await getLatestGames();
-        setGames(games);
-      } catch (error) {
-        setError(error.message);
-      }
-    };
-    fetchGames();
+  useEffect(() => {
+    getLatestGames().then(setGames).catch(setError);
   }, []);
 
   return (
