@@ -1,7 +1,4 @@
-## (WIP)
-
 # Metacritic App
-
 
 ## Descripción del Proyecto
 
@@ -20,10 +17,11 @@ La **Metacritic App** es una aplicación móvil desarrollada en React Native que
 - **Node.js:** Plataforma de ejecución de JavaScript.
 - **npm:** Gestor de paquetes de JavaScript.
 
-## Capturas de Pantalla
+## DEMO
 
-![image](https://github.com/user-attachments/assets/d564bda0-78e4-40e3-9ca7-b67af51c1dc4)
+https://github.com/user-attachments/assets/1535c234-4c1b-4d8b-b09b-a5e8bf2226e7
 
 
-![image](https://github.com/user-attachments/assets/dae69a8e-921d-4b36-9e38-5499bfdafb61)
+## LinkedIn
 
+https://www.linkedin.com/in/yousuf-boutahar/
