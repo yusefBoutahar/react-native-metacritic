@@ -11,7 +11,7 @@ La **Metacritic App** es una aplicación móvil desarrollada en React Native que
 - **Detalles del juego**: Accede a información detallada de cada juego, incluyendo puntuaciones de críticos y usuarios, plataformas disponibles y resúmenes.
 
 
-## Teclogias utilizadas
+## Tecnologias utilizadas
 - **React Native:** Desarrollo de aplicaciones móviles multiplataforma.
 - **Expo:** Herramienta para desarrollo rápido de aplicaciones React Native.
 - **Node.js:** Plataforma de ejecución de JavaScript.
