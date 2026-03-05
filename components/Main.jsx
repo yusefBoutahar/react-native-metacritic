@@ -15,7 +15,7 @@ export const Main = () => {
   return (
     <Screen>
       {error ? (
-        <Text>Error: {error}</Text>
+        <Text className="text-red-500">Error: {error.message}</Text>
       ) : games.length === 0 ? (
         <ActivityIndicator color={"#fff"} size={"large"} />
       ) : (
