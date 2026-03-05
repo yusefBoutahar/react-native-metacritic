@@ -24,7 +24,7 @@ export const GameCard = ({ game }) => {
             <Text className="text-white font-bold text-xl">{game.title}</Text>
             <Score score={game.score} />
             <Text className="text-white">
-              {game.description.slice(0, 100)} ...
+              {game.description ? `${game.description.slice(0, 100)} ...` : ""}
             </Text>
           </View>
         </View>

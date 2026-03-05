@@ -2,9 +2,8 @@ import { View, Text } from "react-native";
 
 export const Score = ({score}) => {
   const getColor = () => {
-    const percentage = (score / 100) * 100;
-    if (percentage < 97) return "bg-red-500 text-white";
-    if (percentage < 98) return "bg-yellow-500 text-white";
+    if (score < 50) return "bg-red-500 text-white";
+    if (score < 75) return "bg-yellow-500 text-white";
     return "bg-green-500 text-white";
   };
   const className = getColor();
